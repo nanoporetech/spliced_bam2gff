@@ -4,12 +4,12 @@
 spliced_bam2gff - a tool to convert spliced BAM alignments into GFF2 format
 ===========================================================================
 
-This tool converts alignments in [BAM](https://samtools.github.io/hts-specs/SAMv1.pdf) format produced by spliced aligners (such as [minimap2](https://github.com/lh3/minimap2), [gmap](http://research-pub.gene.com/gmap)) into [GFF2](https://www.ensembl.org/info/website/upload/gff.html) format.
+The **spliced_bam2gff** tool converts [BAM](https://samtools.github.io/hts-specs/SAMv1.pdf) alignments, produced by spliced aligners (such as [minimap2](https://github.com/lh3/minimap2), [gmap](http://research-pub.gene.com/gmap)), into a [GFF2](https://www.ensembl.org/info/website/upload/gff.html) format.
 
-By default the introns are created based on the `N` cigar operations. Alternatively, if `-d` is specified, all deletions larger than the limit will be classified as introns.
-The orientation of the GFF2 features is determined based on the `XS` strand tag and the SAM flags in a manner depending on the aligner.
+By default, introns are created based on the `N` cigar feature. Alternatively, if `-d` (i.e. for deletion) is specified, any deletions larger than the limit will be classified as an intron.
+The orientation of the GFF2 features is determined by the `XS` strand tag and SAM flags depending on the aligner.
 
-The tool supports splitting the output into loci and bundles of loci with a minimum number of features to enable easy parallelisation of downstream analyses.
+The tool supports splitting the output into *loci* and *bundles of loci* with a minimum number of features, which enables easy parallelisation of downstream analyses.
 The generated GFF2 files can be compared to a reference annotation using the [gffcompare](https://github.com/gpertea/gffcompare) tool.
 
 ## Installation
