@@ -13,8 +13,6 @@ const (
 	StrandTagRead = 2 // Use tag or read orientation if unavailable.
 )
 
-var Version, Build string
-
 // Struct to hold command line arguments:
 type CmdArgs struct {
 	MinimapInput    bool
@@ -53,7 +51,8 @@ func (a *CmdArgs) Parse() {
 	}
 	// Print version:
 	if version {
-		fmt.Printf("version: %s build: %s\n", Version, Build)
+		Version := "1.2"
+		fmt.Printf("version: %s\n", Version)
 		os.Exit(0)
 	}
 
