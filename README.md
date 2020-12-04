@@ -3,6 +3,7 @@
 
 spliced_bam2gff - a tool to convert spliced BAM alignments into GFF2 format
 ===========================================================================
+[![bioconda-badge](https://anaconda.org/bioconda/spliced_bam2gff/badges/installer/conda.svg)](https://conda.anaconda.org/bioconda)
 
 The **spliced_bam2gff** tool converts [BAM](https://samtools.github.io/hts-specs/SAMv1.pdf) alignments, produced by spliced aligners (such as [minimap2](https://github.com/lh3/minimap2), [gmap](http://research-pub.gene.com/gmap)), into a [GFF2](https://www.ensembl.org/info/website/upload/gff.html) format.
 
