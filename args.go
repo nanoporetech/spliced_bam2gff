@@ -38,8 +38,8 @@ func (a *CmdArgs) Parse() {
 	flag.BoolVar(&a.KeepS, "S", false, "Do NOT discard secondary and supplementary alignments.")
 	flag.StringVar(&a.OutDir, "L", "", "Write output partitioned into \"loci\" to this directory. Turns of output to stdout.")
 	flag.Int64Var(&a.MinBundle, "b", -1, "Bundle together loci in batches with at least this size.")
-	flag.Int64Var(&a.MaxProcs, "d", -1, "Classify all deletions larger than this as introns (-1 means off).")
-	flag.Int64Var(&a.MaxDel, "t", 8, "Number of cores to use.")
+	flag.Int64Var(&a.MaxDel, "d", -1, "Classify all deletions larger than this as introns (-1 means off).")
+	flag.Int64Var(&a.MaxProcs, "t", 8, "Number of cores to use.")
 	flag.BoolVar(&help, "h", false, "Print out help message.")
 	flag.BoolVar(&version, "V", false, "Print out version.")
 
